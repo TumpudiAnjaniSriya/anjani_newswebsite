@@ -21,6 +21,7 @@ app.get("/signup" , function(req,res){
     res.sendFile(__dirname+'/index.html')
 })
 
+
 app.post("/signupsubmit",function(req,res){
   db.collection("signup1").where(Filter.or(
     Filter.where("username","==",req.body.username),
@@ -63,7 +64,9 @@ app.set('view engine','ejs');
 app.get('/',(req,res)=>{
   res.sendFile(__dirname+'/lander.html');
 })
-
+app.get('/home',(req,res)=>{
+  res.render("news.ejs");
+})
 app.get('/about',(req,res)=>{
   res.render("index.ejs",{titles:''})
 })
