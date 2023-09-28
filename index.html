@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Open+Sans:wght@600&family=Roboto:wght@300;400&display=swap');
+       #box1{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: 150px;
+       }
+       #box3{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: -20px;
+       }
+       #box2{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        height: 400px;
+        width:350px;
+        box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
+       }
+       #names{
+        margin-right: 30px;
+        font-size: 13px;
+        padding: 20px;
+       }
+       #box4{
+        display: flex;
+        background-color: rgb(240, 65, 65);
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-evenly;
+        height: 400px;
+        width:350px;
+        box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
+       }
+       #b1,#b2{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+       }
+       .btn {
+            display: inline-block;
+            padding: 8px 18px;
+            font-size: 14px;
+            font-family: 'DM Sans', sans-serif;
+            font-family: 'DM Sans', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            background-color: #FA5252;
+            margin-top: 10px;
+            margin-left: 110px;
+        }
+        h1,#names,#spp{
+          font-family: 'DM Sans', sans-serif;
+          font-family: 'Open Sans', sans-serif;
+          font-family: 'Roboto', sans-serif;
+        }
+        #para{
+          font-family: 'Open Sans', sans-serif;
+          font-family: 'Roboto', sans-serif;
+          color: aliceblue;
+          font-size: 25px;
+          margin-bottom: -30px;
+        }
+        #image{
+          margin-bottom: -30px;
+          margin-left: 20px;
+        }
+        #email,#pd,#ln{
+          margin-top: 10px;
+        }
+        #sp{
+          margin-left: 20px;
+          margin-bottom: 20px;
+          margin-top: -40px;
+        }
+        #spp{
+          font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+    <div id="box4">
+      <div><img  id="image" width="120" height="120" src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/FFFFFF/external-user-medical-kiranshastry-lineal-kiranshastry.png" alt="external-user-medical-kiranshastry-lineal-kiranshastry"/></div>
+      <div><p id="para">Let's get you to set up</p></div>
+    </div>
+    <div id ="box2">
+    <div><h1>Sign Up</h1></div>
+    <form method="post" action="/signupsubmit">
+    <div id="box3">
+    <div id="names">
+      <div>First name</div><br>
+      <div id="ln">Last name</div><br>
+      <div id="email">Email</div><br>
+      <div id="pd">Password</div><br>
+    </div>
+    <div id="inputboxes">
+    <div><input type="text" name="fname" id="b1"></div><br>
+    <div><input type="text" name="lname" id="b1"></div><br>
+    <div><input type="email" name="username" id="b1"></div><br>
+    <div><input type="password" name="pwsd" id="b2"></div><br>
+    </div>
+    </div>
+    <div><input type="checkbox" onclick="myFunction()" id="sp"><span id="spp">Show Password</span></div>
+    <div><button class="btn">submit</button></div>
+    </form>
+    
+    </div>
+    </div>
+    <script>
+      function myFunction() {
+      var x = document.getElementById("b2");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+</body>
+</html>

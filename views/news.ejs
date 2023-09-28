@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+        .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0px 0px 3px ;
+        background-color: white;
+    }
+    body {
+  overflow-x: hidden;
+}
+    #name{
+        margin-right: 500px;
+        font-size: 30px;
+        color:rgb(21, 21, 21);
+    }
+    #ele:hover{
+        color:#FA5252;
+    }
+    #ele{
+        color:rgb(14, 13, 13);
+        margin-top:13px;
+    }
+    #two{
+      font-size: 40px;
+      color: #FA5252;
+    }
+    #down-box1 div {
+      margin: 0;
+      padding: 20px;
+      border-right: 1px solid #ccc; 
+    }
+    #down-box1 div:last-child {
+  border-right: none; 
+}
+    #l1{
+      margin-left: 60px;
+    }
+    #l1:hover,#ts:hover{
+      color:  #FA5252;
+    }
+    #empty{
+      margin-top:100px;
+    }
+    #parent-con{
+      /*margin-left: 210px;*/
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: left;
+      justify-content: space-between;
+      height:1700px;
+      width:720px;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      background-color:white;
+      padding-right: 150px;
+    }
+    #child-con{
+      height: 200px;
+      width:820px;
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid rgb(203, 201, 201);
+    }
+    #child-con:hover{
+      box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+    #images{
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+    #headline{
+      font-size: 20px;
+
+    }
+    a{
+      color: #000;
+      text-decoration: none;
+    }
+    #main-con{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: -60px;
+    }
+    #parent-con1{
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: left;
+      justify-content: space-between;
+      height:1700px;
+      width:500px;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
+    #child-con1{
+      display: flex;
+      height: 270px;
+      width:350px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+      padding:5px;
+    }
+    #p1{
+      font-size: 15px;
+      margin-bottom: -25px;
+      margin-top: -2px;
+    }
+    #p2{
+      font-size: 14px;
+    }
+    #enter{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .my-button{
+      margin-left:60px;
+    }
+    #country{
+      padding-top: 100px;
+    }
+    #input{
+      height: 33px;
+      width: 700px;
+      border-radius: 10px;
+      border: 1.5px solid rgb(203, 201, 201);
+    }
+    .my-button {
+    padding: 7px 15px;
+    font-size: 16px; 
+    background-color:rgb(240, 65, 65);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+    }
+    .my-button:hover {
+        background-color:rgb(208, 23, 23);
+    }
+    .my-button:active {
+        background-color:#FA5252;
+    }
+    .my-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    #down-box{
+      background-color: #f3efef;
+      height: 270px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top:50px;
+    }
+    #down-box1{
+      height: 200px;
+      width:200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: left;
+      padding: 20px;
+    }
+    select {
+            padding: 7px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Style the select options */
+        select option {
+            background-color: #f3f3f3;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* Style the select when it's focused */
+        select:focus {
+            outline: none;
+            border-color: #FA5252;
+        }
+        #drop-down1{
+          position:relative;
+          left:890px;
+          top:-37px;
+        }
+        #cat{
+          width:230px;
+          height: 35px;
+        }
+        #heading{
+          position: relative;
+          top:-70px;
+        }
+        #bu{
+        border: none;
+        padding: 0;
+        backface-visibility: hidden;
+        background: transparent;
+        margin-right: 50px;
+        margin-top: 15px; 
+    }
+    #line{
+      border:10px;
+      border-color: #000;
+      width: 2px;
+      height: 200px;
+      background-color: #797575;
+    }
+    #latest{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    #trending{
+      display: flex;
+      align-items: left;
+      justify-content: space-evenly;
+      flex-direction: column;
+      width: 450px;
+    }
+    #line1{
+      border:10px;
+      border-color: #000;
+      width: 450px;
+      height: 0.5px;
+      background-color: #797575;
+      margin-bottom: 20px;
+    }
+    #a:hover{
+      color: #FA5252;
+    }
+    #vline{
+      width:1px;
+      background-color: #797575;
+      height: 400px;
+      border: 10px;
+      margin-left: 20px;
+    }
+    #entertainment{
+      display: flex;
+      align-items: left;
+      justify-content: space-evenly;
+      flex-direction: column;
+      width: 600px;
+    }
+    #ans,#ans1,#ans2,#ans3,#ans4,#ans5{
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <span id="name">News<span id="two">2</span>Day</span>
+    <span id="ele">Home</span>
+    <span id="ele"><a href="#heading" id="ts">Top stories</a></span>
+    <form method="get" action="/signup">
+    <button id="bu"><span id="ele">Signup</span></button>
+    </form>
+    <form method="get" action="/">
+    <button id="bu"><span id="ele">Logout</span></button>
+    </form>
+</div>
+<div> 
+</div>
+  
+  <div id="empty"></div>
+  <form method='post' action='/about'>
+    <div id="enter">
+    <input placeholder="Enter Country" name="country" type="text" id="input">
+    <button class="my-button">search</button>
+    </div>
+  </form>
+  <span ><div id="drop-down1">
+    <form method="post" action="/about1">
+    <select name="cat" id="cat">
+      <option value="" disabled selected hidden>-- Categories --</option>
+      <option>Sports</option>
+      <option>Politics</option>
+      <option>Entertainment</option>
+      <option>Business</option>
+      <option>Technology</option>
+    </select>
+    <button class="my-button">select</button>
+    </form>
+   </div></span>
+  <br><br>
+  <h1 id="heading">Top Stories</h1>
+  <div id="main-con">
+  <div id="parent-con">
+    <a href="https://sports.ndtv.com/chess/pm-narendra-modi-meets-r-praggnanandhaa-has-a-special-message-for-chess-grandmaster-4346109"><div id="child-con">
+      <div><img src="https://c.ndtvimg.com/2023-08/nfv96ha_chess_625x300_31_August_23.jpg?output-quality=80&downsize=639:*" width="170px" height="150px" id="images"></div>
+        <div><p><span id="headline"><b>PM Narendra Modi Meets R Praggnanandhaa, Has A Special Message For Chess World Cup Hero</b></span><br><br>Chess grandmaster R Praggnanandhaa has been dominating headlines since winning the silver medal at the Chess World Cup. Although he was defeated by the reigning World No. 1 Magnus Carlsen in the final of the competition, his impressive journey in the competition earned him a lot of praise.</p></div>
+    </div></a>
+    <a href="https://www.ndtv.com/delhi-news/harpreet-gill-amazon-manager-murder-bhajanpura-murder-maya-gang-18-year-old-gangster-wanted-in-4-murders-shot-amazon-manager-dead-cops-4344571#trendingnow"><div id="child-con">
+      <div><img src="https://c.ndtvimg.com/2023-08/rlmqj0h8_maya-gang-leader_625x300_31_August_23.jpg" width="170px" height="150px" id="images"></div>
+      <div><p><span id="headline"><b>Behind Amazon Manager's Murder, 'Maya Gang' Led By 18-Year-Old</b></span><br><br>New Delhi: Four murder cases, a dozen gang members, Insta reels with guns and filmy dialogues - the prime accused in the midnight murder of Amazon manager Harpreet Gill is an 18-year-old like none other.</p></div>
+    </div></a>
+    <a href="https://www.ndtv.com/india-news/moon-lander-vikram-records-event-appears-natural-under-investigation-isro-4346105#trendingnow"><div id="child-con">
+      <div><img src="https://c.ndtvimg.com/2023-08/amdhuusk_pragyan-rover-clicked-an-image-of-vikram-lander-twitter_625x300_30_August_23.jpg" width="170px" height="150px" id="images"></div>
+      <div><p><span id="headline"><b>Moon Lander Records "Event, Appears Natural, Under Investigation": ISRO</b></span><br><br>The Instrument of Lunar Seismic Activity payload on Chandrayaan-3's Lander Vikram recorded a natural event that occurred on the Moon's surface on August 26, the source of which is still under investigation, the space agency said.
+        The Instrument for Lunar Seismic Activity's (ILSA) primary objective is to measure ground vibrations generated by natural quakes, impacts, and artificial events. </p></div>
+    </div></a>
+    <a href="https://www.ndtv.com/feature/us-doctor-who-studied-5-000-near-death-experiences-says-this-about-afterlife-4344412#trendingnow"><div id="child-con">
+      <div><img src="https://c.ndtvimg.com/2023-08/en3ujp2_life-after-death_625x300_31_August_23.jpg" width="170px" height="150px" id="images"></div>
+      <div><p><span id="headline"><b>US Doctor Who Studied 5,000 Near-Death Experiences Says This About Afterlife</b></span><br><br>Notably, Dr. Jeffrey Long's fascination with near-death experiences also led to him founding the Near-Death Experience Research Foundation in 1998. Recently, he published an essay based on his experiences in Insider. He defined NDEs as ''someone who is either comatose or clinically dead, without a heartbeat, having a lucid experience where they see, hear, feel emotions, and interact with other beings.''</p></div>
+    </div></a>
+    <a href="https://www.ndtv.com/india-news/8-terrorists-arrested-in-jammu-and-kashmir-one-among-them-has-a-government-job-police-4346191#trendingnow"><div id="child-con">
+    <div><img src="https://c.ndtvimg.com/2023-08/44polie_terrorists-arrested-in-jk_625x300_31_August_23.jpg" width="170px" height="150px" id="images"></div>
+      <div><p><span id="headline"><b>8 Terrorists Arrested In J&K, One Among Them Has A Government Job: Police</b></span><br><br>Srinagar: Eight terrorists who evaded the law for three decades have been arrested in Jammu and Kashmir, police said on Thursday. One among them had even landed a government job.
+        The State Investigation Agency (SIA) and Criminal Investigation Department (CID) made the arrests in Doda district. Evading action, they were enjoying a normal life, police said.</p></div>
+      </div></a>
+    <a href="https://www.ndtv.com/education/iit-delhi-launches-new-design-thinking-programme-registrations-begin-4342233"><div id="child-con">
+      <div><img src="https://c.ndtvimg.com/2022-12/op5svbp_iit-delhil2_625x300_09_December_22.jpg" width="170px" height="150px" id="images"></div>
+      <div><p><span id="headline"><b>IIT Delhi Launches New Design Thinking Programme, Registrations Begin</b></span><br><br>The Indian Institute of Technology, Delhi, is inviting applications for the 6th online Certificate Programme in Design Thinking and Innovation.
+        The 20-week programme that will be taught online is scheduled to commence on December 28th, 2023.
+        </p></div>
+    </div></a>
+    <a href="https://www.ndtv.com/world-news/elon-musks-x-sued-by-thousands-of-employees-over-severance-pay-report-4346791#trendingnow"><div id="child-con">
+      <div><img src="https://c.ndtvimg.com/2023-07/lesbcfj8_elon-musk-with-model-y-afp-1200_625x300_25_July_23.jpg" width="170px" height="150px" id="images"></div>
+      <div><p><span id="headline"><b>Elon Musk's 'X' Sued By Thousands Of Employees Over Severance Pay: Report</b></span><br><br>Billionaire Elon Musk's X, the social media formerly known as Twitter, is facing 2,200 arbitration claims from ex-employees since Mr. Musk took over the company and fired most of its workforce. The filing fees alone for that volume of cases could amount to $3.5 million.</p></div>
+    </div></a>
+  </div>
+  <div id="parent-con1">
+      <div id="child-con1">
+        <div><img src="https://c.ndtvimg.com/2023-09/vql0c96o_rajni_120x90_01_September_23.jpg" height="150px" width="350px"></div>
+        <div>
+          <a href="https://www.ndtv.com/entertainment/rajinikanth-is-the-highest-paid-actor-in-india-report-4347713#trendingnow" id="ts"><p id="p1"><b>The Jailer Effect: In This Pic, Rajinikanth Getting A Cheque For ₹ 100 Crore (Apparently)</b></p></a><br>
+          <p id="p2">New Delhi: Rajinikanth's latest release Jailer is unstoppable. The film, which marked the superstar's return to the big screens after two years, has collected more than ₹ 600 crore at the box office (worldwide).</p>
+        </div>
+      </div>
+      <div id="child-con1">
+        <div><img src="https://c.ndtvimg.com/2023-09/ngs1l5t_street-vendor_625x300_01_September_23.jpg" height="150px" width="350px"></div>
+        <div>
+          <a href="https://www.ndtv.com/food/vegetable-vendors-creative-way-of-accepting-digital-payments-wins-internet-4347400#trendingnow" id="ts"><p id="p1"><b>Digital Payment Gets Over 12 Million Views</b></p></a><br>
+          <p id="p2">. Recently, we saw how a vegetable vending lady found the perfect 'jugaad' to add the digital payment option to her venture. Wondering what she did? Take a look at the vegetable vendor's creative way of accepting digital payments.</p>
+        </div>
+      </div>
+      <div id="child-con1">
+        <div><img src="https://c.ndtvimg.com/2021-02/hd824m9o_money-generic-rupees-generic_625x300_25_February_21.jpg" height="150px" width="350px"></div>
+        <div>
+          <a href="https://www.ndtv.com/india-news/5-financial-changes-coming-into-effect-from-september-read-details-4347553#trendingnow" id="ts"><p id="p1"><b>5 Financial Changes Coming Into Effect From September.</b></p></a><br>
+          <p id="p2">The month of September is bringing many changes, especially in the financial sector.  These changes are also connected to Aadhaar update and linking of the identity document with the PAN card.</p>
+        </div>
+      </div>
+      <div id="child-con1">
+        <div><img src="https://c.ndtvimg.com/2022-09/2ea08u6o_ins-vikrant-pti-navy-pro_625x300_02_September_22.jpg" height="150px" width="350px"></div>
+        <div>
+          <a href="https://www.ndtv.com/india-news/prepping-for-another-india-made-aircraft-carrier-indian-navys-big-announcement-4348263#trendingnow" id="ts"><p id="p1"><b>Prepping For Another India-Made Aircraft Carrier: Navy's Big Announcement</b></p></a><br>
+          <p id="p2">Mumbai: Chief of Naval Staff Admiral R Hari Kumar made a big announcement today, that the Navy is looking at a repeat order for an Indigenous Aircraft Carrier (IAC) after inducting INS Vikrant and preparing a case for it.</p>
+        </div>
+      </div>
+      <div id="child-con1">
+        <div><img src="https://i.ndtvimg.com/i/2016-07/books-generic_650x400_61467521389.jpg" height="150px" width="350px"></div>
+        <div>
+          <a href="https://www.ndtv.com/education/ncert-gets-deemed-university-status-union-education-minister-dharmendra-pradhan-4348012" id="ts"><p id="p1"><b>NCERT Gets Deemed University Status: Education Minister</b></p></a><br>
+          <p id="p2">New Delhi: The National Council of Educational Research and Training (NCERT) has been granted the status of deemed university, Union Education Minister Dharmendra Pradhan said on Friday.</p>
+        </div>
+      </div>
+      <div id="child-con1">
+        <div><img src="https://i.ndtvimg.com/i/2017-08/hacker-istock_650x400_61502590559.jpg" height="150px" width="350px"></div>
+        <div>
+          <a href="https://www.ndtv.com/world-news/data-theft-espionage-to-cost-germany-224-billion-in-2023-survey-4348001#pfrom=home-ndtvworld_topstory" id="ts"><p id="p1"><b>Data Theft, Espionage To Cost Germany $224 Billion in 2023: Survey</b></p></a><br>
+          <p id="p2">Berlin: The theft of IT equipment and data, as well as digital and industrial espionage and sabotage, will cost Germany 206 billion euros ($223.55 billion) in 2023, Germany's digital association Bitkom said Friday.</p>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div id="latest">
+    <div id="trending">
+      <div><h2>Trending</h2></div>
+      <div><h4><a href="javascript:apple();" id="a">Apple iPhone 15 series: Price in India compared to US, Dubai, Vietnam and other regions</a></h4></div>
+      <div><p id="ans"></p></div>
+      <div id="line1"></div>
+      <div><h4><a href="javascript:pak();" id="a">In the age of ‘Sanatan Dharma’ and cries of ‘go to Pakistan’, the nationalism of the poet and philosopher</a></h4></div>
+      <div><p id="ans1"></p></div>
+      <div id="line1"></div>
+      <div><h4><a href="javascript:ap();" id="a">Andhra Pradesh IIIT graduate hacks website, siphons reward points worth over Rs 4 crore; held in Bengaluru</a></h4></div>
+      <div><p id="ans2"></p></div>
+    </div>
+    <div id="vline"></div>
+    <div id="entertainment">
+      <div><h2>Entertainment</h2></div>
+      <div><h4><a href="javascript:jawan();" id="a">Jawan: Shah Rukh Khan’s movie asks the tantalising question, ‘What if Ravish Kumar became a vigilante?’</a></h4></div>
+      <div><p id="ans3"></p></div>
+      <div id="line1"></div>
+      <div><h4><a href="javascript:salar();" id="a">Prabhas’ Salaar to not release in September, makers say ‘Our team is working tirelessly to…’</a></h4></div>
+      <div><p id="ans4"></p></div>
+      <div id="line1"></div>
+      <div><h4><a href="javascript:rahman();" id="a">Marakkuma Nenjam concert issue: ACTC Events tender unconditional apology; urge all to refrain from targetting AR Rahman</a></h4></div>
+      <div><p id="ans5"></p></div>
+    </div>
+  </div> 
+  <footer>
+  <div id="down-box">
+    <div id="down-box1">
+      <h3><b>Top</b></h3>
+      <p>India news</p>
+      <p>Jobs</p>
+      <p>Sports News</p>
+      <p>Mobile&Tabs</p>
+    </div>
+    <div id="line"></div>
+    <div id = "down-box1">
+      <h3><b>Trending news</b></h3>
+      <p>Cricket News</p>
+      <p>Education news</p>
+      <p>Stock Market Quotes </p>
+      <p>Health and Wellness</p>
+    </div>
+    <div id="line"></div>
+    <div id="down-box1">
+      <p>About</p>
+      <p>Contact</p>
+      <p>Help</p>
+    </div>
+    <div id="line"></div>
+    <div  id="down-box1">
+      <b>FOLLOW US</b>
+      <p><img src="https://img.icons8.com/?size=2x&id=32292&format=png" alt="insta" height="30px" width="30px"></p>
+      <p><img src="https://img.icons8.com/?size=2x&id=437&format=png" alt="twit" height="30px" width="30px"></p>
+      <p><img src="https://img.icons8.com/?size=2x&id=118468&format=png" alt="face" height="30px" width="30px"></p>
+    </div>
+  </div>
+  </footer>
+<script>
+    function apple(){
+      document.getElementById("ans").textContent="Apple officially unveiled the iPhone 15 series at its overnight “Wonderlust” launch event. Available starting from September 22, there is a massive difference in pricing among markets like India, the US, and Hong Kong, especially with the high-end Pro models, which are now even more expensive than their predecessors in India"
+    }
+    function pak(){
+      document.getElementById("ans1").textContent="Beyond its religious dimension, the past decade has witnessed the intensification of a very particular kind of nationalism. This has moulded public discourse through defining those whose beliefs, behaviours and utterances are “genuinely” Indian and others who are characterised as “outsiders” and “anti-nationals”."
+    }
+    function ap(){
+      document.getElementById("ans2").textContent="A 23-year-old Computer Science graduate from the Indian Institute of Information Technology (IIIT) Ongole was arrested by the Bengaluru police for allegedly hacking into a website and siphoning reward points worth Rs 4.16 crore. The accused had fraudulently redeemed about 6 lakh gift vouchers, the police said."
+    }
+    function jawan(){
+      document.getElementById("ans3").textContent="Released over a decade after the debacle of Ra.One, Jawan is SRK’s latest love-letter to superhero cinema, bubbling with that same rage against the machine that was also felt in his last film, the slickly packaged Pathaan."
+    }
+    function salar(){
+      document.getElementById("ans4").textContent="Salaar Part 1: Ceasefire, starring Prabhas and Shruti Hassan, was scheduled for a September release. But the reports of it getting postponed started doing the rounds on the internet earlier this month. Now, Homable Films, the production company behind the film, has released an official statement announcing that the movie will not hit theatres on September 28."
+    }
+    function rahman(){
+      document.getElementById("ans5").textContent="Taking full responsibility for the alleged mismanagement of AR Rahman’s Marakkuma Nenjam concert at East Coast Road in Chennai on Sunday, the organisers, ACTC Events, tendered an unconditional apology to all those who faced hardships."
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+            .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0px 0px 3px ;
+        background-color: white;
+    }
+    #name{
+        margin-right: 500px;
+        font-size: 30px;
+        color:rgb(21, 21, 21);
+    }
+    #two{
+      font-size: 40px;
+      color: #FA5252;
+    }
+    #l1{
+      margin-left: 60px;
+    }
+    #ele:hover,#bu:hover{
+        color:#FA5252;
+    }
+    #ele{
+        color:rgb(14, 13, 13);
+        margin-top:13px;
+    }
+    #bu{
+        border: none;
+        padding: 0;
+        backface-visibility: hidden;
+        background: transparent;
+        margin-left: -150px;
+        
+    }
+    #main-con{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 70px;
+        margin-bottom: -50px;
+    }
+    #parent-con1{
+        display: flex;
+        flex:0.7;
+        flex-direction: column;
+        height: 600px;
+        width:500px;
+        justify-content: space-between;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    #parent-con2{
+        display:flex;
+        flex:2;
+        flex-direction: column;
+        width: 900px;
+        padding: 10px;
+    }
+    #child-con1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .half {
+    flex:1;
+    height: 100vh;
+    overflow-y: auto; 
+    }
+    .half::-webkit-scrollbar {
+    width: 9px;
+    }
+    .half::-webkit-scrollbar-thumb {
+        background-color: #888; /* Color of the scrollbar thumb */
+    }
+    .half::-webkit-scrollbar-track {
+        background-color: #f0f0f0;
+    }
+    .half {
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f0f0f0;
+    }
+    #tit{
+        font-size: 30px;
+    }
+    #matter{
+        font-size: 20px;
+    }
+    #date{
+        position: relative;
+        left:750px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <span id="name">News<span id="two">2</span>Day</span>
+            <span id="ele">
+                <form method='get' action='/'><button id="bu">Home</button></form>
+            </span>
+        </div>
+        <div id="main-con">
+        <div id="parent-con1" class="half">
+            <%for(let i=titles.length-1 ; i>6 ; i--){%>
+            <div id="child-con1">
+                <p><b><%=titles[i]['title']%></b></p>
+                <p><img src=<%=titles[i]['image']%>alt="img" height="140px" width="260px"></p>
+              </div>
+            <%}%> 
+        </div>
+        <div id="parent-con2" class="half">
+        <%for(let i = 0 ; i<titles.length ; i++){%>
+            <p id="tit"><b><%=titles[i]['title']%></b></p>
+            <img src=<%=titles[i]['image']%> alt="img" height="500px" width="700px">
+            <p id="matter"><%=titles[i]['body']%></p>
+            <p id="date"><%=titles[i]['date']%></p>
+            <%}%>
+        </div>
+        </div>
+    </body>
+</html>
